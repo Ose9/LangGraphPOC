@@ -10,7 +10,6 @@ from langgraph.graph.message import add_messages
 from langgraph.prebuilt import ToolNode
 from langgraph.checkpoint.memory import MemorySaver
 
-# -------- Tools (mocked for a quick POC) --------
 DATA = [
     {"sku": "A-101", "revenue": 900,  "cogs": 1200, "qty": 18, "category": "Apparel"},
     {"sku": "B-202", "revenue": 1600, "cogs": 1400, "qty": 25, "category": "Apparel"},
@@ -20,9 +19,6 @@ DATA = [
 
 @tool
 def fetch_margin_anomalies(days: int = 30, min_loss: int = 500) -> dict:
-    """
-    Return SKUs with negative profit whose absolute loss >= min_loss in the last `days`.
-    """
     anomalies = []
     for row in DATA:
         profit = row["revenue"] - row["cogs"]
