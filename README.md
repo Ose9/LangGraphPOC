@@ -8,3 +8,6 @@ Optional: wire to ClickHouse later
 
 Replace fetch_margin_anomalies with a real ClickHouse query (clickhouse-connect) and compute losses in SQL.
 Swap raise_ticket with a Power Automate HTTP action or Teams/Planner API call.
+
+When you use it, please add the open ai api key or use openrouter one. 
+ChatOpenAI(api_key="sk-or-v1-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",base_url="https://openrouter.ai/api/v1")
